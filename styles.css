@@ -34,6 +34,7 @@ body {
     padding: 30px 40px;
     border-radius: 15px;
     z-index: 1;
+    opacity: 0.9;
 }
 
 h1 {
@@ -49,6 +50,7 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    opacity: 0.9;
 }
 
 #yesButton {
