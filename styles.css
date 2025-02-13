@@ -1,0 +1,63 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #ffe6e6;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item {
+    width: 100px; /* Adjust as needed */
+    height: 100px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly more transparent */
+    padding: 30px 40px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ff4d4d;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#yesButton {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#noButton {
+    background-color: #cccccc;
+    color: black;
+    position: absolute;
+}
