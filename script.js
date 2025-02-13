@@ -30,18 +30,22 @@ yesButton.addEventListener('click', function() {
     alert("Yay! Luv you so much, Pu Pu layy!");
 });
 
-// Animate the images in a circle
+// Animate the images in circles
 const images = document.querySelectorAll('.grid-item');
 const totalImages = images.length;
-const radius = 200; // Radius of the circle
+const innerRadius = 150; // Decreased radius of the inner circle
+const outerRadius = 350; // Increased radius of the outer circle
 let angle = 0;
 
 function animateImages() {
+    const half = Math.floor(totalImages / 2); // Half of the images for each circle
+
     for (let i = 0; i < totalImages; i++) {
         const img = images[i];
-        const theta = angle + (2 * Math.PI * i) / totalImages;
-        const x = (window.innerWidth / 2) + radius * Math.cos(theta) - img.clientWidth / 2;
-        const y = (window.innerHeight / 2) + radius * Math.sin(theta) - img.clientHeight / 2;
+        const radius = i < half ? innerRadius : outerRadius; // Use inner or outer radius
+        const theta = i < half ? (angle + (2 * Math.PI * i) / half) : (angle + (2 * Math.PI * (i - half)) / half + Math.PI / half); // Offset the outer images by adding Math.PI/half
+        const x = centerX + radius * Math.cos(theta) - img.clientWidth / 2;
+        const y = centerY + radius * Math.sin(theta) - img.clientHeight / 2;
         img.style.left = `${x}px`;
         img.style.top = `${y}px`;
     }
@@ -49,12 +53,17 @@ function animateImages() {
     requestAnimationFrame(animateImages);
 }
 
-// Set the background images
+// Set the background images for the new elements
 images[0].style.backgroundImage = "url('background1.jpg')";
 images[1].style.backgroundImage = "url('background2.jpg')";
 images[2].style.backgroundImage = "url('background3.jpg')";
 images[3].style.backgroundImage = "url('background4.jpg')";
 images[4].style.backgroundImage = "url('background5.jpg')";
+images[5].style.backgroundImage = "url('background11.jpg')"; // New image
+images[6].style.backgroundImage = "url('background7.jpg')"; // New image
+images[7].style.backgroundImage = "url('background8.jpg')"; // New image
+images[8].style.backgroundImage = "url('background9.jpg')"; // New image
+images[9].style.backgroundImage = "url('background10.jpg')"; // New image
 
 // Start the animation
 animateImages();
