@@ -16,8 +16,8 @@ body {
 }
 
 .grid-item {
-    width: 100px; /* Adjust as needed */
-    height: 100px;
+    width: 200px; /* Adjust as needed */
+    height: 200px;
     position: absolute;
     background-size: cover;
     background-position: center;
