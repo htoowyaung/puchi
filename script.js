@@ -20,7 +20,7 @@ noButton.addEventListener('mouseover', function() {
 
     // Make the "Yes" button larger
     const currentSize = parseInt(window.getComputedStyle(yesButton).fontSize);
-    const newSize = currentSize + 2;
+    const newSize = currentSize + 4;
     yesButton.style.fontSize = `${newSize}px`;
     yesButton.style.padding = `${newSize + 2}px ${newSize + 10}px`;
 });
