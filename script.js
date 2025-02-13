@@ -27,7 +27,7 @@ noButton.addEventListener('mouseover', function() {
 
 // Function to handle the "Yes" button click event
 yesButton.addEventListener('click', function() {
-    alert("Yay! I can't wait to celebrate Valentine's Day with you!");
+    alert("Yay! Luv you so much, Pu Pu layy!");
 });
 
 // Animate the images in a circle
